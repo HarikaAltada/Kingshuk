@@ -1,0 +1,46 @@
+.responsive-map {
+  overflow: hidden;
+  height: 0;
+  padding-bottom: 30%;
+  position: relative;
+}
+.responsive-map iframe {
+  border: 0;
+  height: 90%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+.footer__socials {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.footer__socials img {
+  max-width: 25px;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+.footer__bar {
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #78716c;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .responsive-map {
+    padding-bottom: 50%; /* Adjust as needed */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .responsive-map {
+    padding-bottom: 60%; /* Adjust as needed */
+  }
+  .footer__socials {
+    justify-content: center;
+  }
+}

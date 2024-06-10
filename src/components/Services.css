@@ -1,0 +1,153 @@
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.service-list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #0c0a09;
+  opacity: 0; /* Initial state: hidden */
+  transform: translateX(100%); /* Initial state: off-screen right */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Adding delay to each list item */
+.service-list.animate li:nth-child(1) {
+  animation: slideInRight 0.5s ease-out forwards 1s;
+}
+.service-list.animate li:nth-child(2) {
+  animation: slideInRight 0.5s ease-out forwards 2s;
+}
+.service-list.animate li:nth-child(3) {
+  animation: slideInRight 0.5s ease-out forwards 3s;
+}
+.service-list.animate li:nth-child(4) {
+  animation: slideInRight 0.5s ease-out forwards 4s;
+}
+
+/* Existing styles for span and image */
+.service-list span {
+  padding: 10px 12px 4px 12px;
+  font-size: 1.75rem;
+  border-radius: 100%;
+}
+.service-list img {
+  height: 28px;
+  width: 28px;
+}
+
+/* Existing styles for span background colors */
+.service-list li:nth-child(1) span {
+  color: #60a5fa;
+  background-color: #dbeafe;
+}
+.service-list li:nth-child(2) span {
+  color: #f472b6;
+  background-color: #fce7f3;
+}
+.service-list li:nth-child(3) span {
+  color: #c084fc;
+  background-color: #f3e8ff;
+}
+.service-list li:nth-child(4) span {
+  color: #fb7185;
+  background-color: #ffe4e6;
+}
+
+/* Other existing styles */
+.services {
+  background-image: url("D:/kingshuk/kingshukh/public/icons/palash.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.service-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 5rem 1rem;
+  padding-block: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.service-content {
+  grid-column: 2/3;
+  padding: 2rem 4rem;
+  background-color: white;
+}
+.service-list {
+  list-style: none;
+  margin-top: 2rem;
+  display: grid;
+  gap: 2rem;
+}
+.banner-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 5rem 1rem;
+}
+.banner-content {
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+.banner-card {
+  text-align: center;
+  flex: 1 1 180px;
+}
+.banner-card h4 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #0c0a09;
+}
+.banner-card p {
+  color: #78716c;
+}
+@media (max-width: 768px) {
+  .service-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .service-content {
+    padding: 1rem;
+  }
+  .service-list li {
+    font-size: 1rem;
+  }
+  .banner-card h4 {
+    font-size: 1.5rem;
+  }
+  .banner-content {
+    padding: 1rem;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-container {
+    padding: 0.5rem;
+  }
+  .service-content {
+    padding: 0.5rem;
+  }
+  .banner-card h4 {
+    font-size: 1.25rem;
+  }
+  .banner-card p {
+    font-size: 0.875rem;
+  }
+}
